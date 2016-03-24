@@ -9,6 +9,13 @@
         "staffim/datetime": "^1.0"
     },
     "require-dev": {
+        "phpunit/phpunit": "~4.8",
+        "symfony/framework-bundle": "~2.6|~3.0",
+        "symfony/security-bundle": "~2.6|~3.0"
+    },
+    "suggest": {
+        "jms/serializer-bundle": "Provides handler for DateTime",
+        "doctrine/mongodb-odm-bundle": "Allows storing dates with milliseconds in MongoDB"
     },
     "autoload": {
         "psr-4": {

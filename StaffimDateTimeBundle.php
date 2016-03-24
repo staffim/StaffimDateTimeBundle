@@ -12,6 +12,8 @@ class StaffimDateTimeBundle extends Bundle
 {
     public function __construct()
     {
-        Type::registerType('date', 'Staffim\DateTimeBundle\MongoDB\Type\DateType');
+    	if (class_exists('Doctrine\\ODM\\MongoDB\\Types\\Type')) {
+    		Type::registerType('date', 'Staffim\DateTimeBundle\MongoDB\Type\DateType');
+    	}
     }
 }
