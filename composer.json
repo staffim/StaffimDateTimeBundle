@@ -1,0 +1,21 @@
+{
+    "name": "staffim/datetime-bundle",
+    "description": "Bundle for Symfony2 with improvements for DateTime",
+    "keywords": ["timestamp", "mongodb", "datetime", "serializer", "symfony", "bundle"],
+    "license": "MIT",
+    "type": "bundle",
+    "authors": [{"name": "Vyacheslav Salakhutdinov", "email": "megazoll@gmail.com"}],
+    "require": {
+        "staffim/datetime": "^1.0"
+    },
+    "require-dev": {
+    },
+    "autoload": {
+        "psr-4": {
+            "Staffim\\DateTimeBundle\\": ""
+        }
+    },
+    "config": {
+        "bin-dir": "bin"
+    }
+}
