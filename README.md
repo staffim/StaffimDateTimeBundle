@@ -1,10 +1,10 @@
 # StaffimDateTimeBundle
 
-[![Build Status](https://travis-ci.org/staffim/DateTimeBundle.svg?branch=master)](https://travis-ci.org/staffim/DateTimeBundle)
+[![Build Status](https://travis-ci.org/staffim/StaffimDateTimeBundle.svg?branch=master)](https://travis-ci.org/staffim/StaffimDateTimeBundle) [![SensioLabsInsight](https://insight.sensiolabs.com/projects/c02d5741-8d81-4c03-be1d-7d2260bc8aee/mini.png)](https://insight.sensiolabs.com/projects/c02d5741-8d81-4c03-be1d-7d2260bc8aee)
 
 [StaffimDateTime](https://github.com/staffim/DateTime) for Symfony.
 Bundle presents Timestampable interface/trait for models, [Serializer](http://jmsyst.com/libs/serializer) handler,
-Doctrine Mongodb type handlers for Staffim\DateTime classes.
+Doctrine MongoDB type handlers for Staffim\DateTime classes.
 
 ## Installation
 
