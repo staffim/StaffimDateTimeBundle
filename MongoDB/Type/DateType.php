@@ -25,13 +25,27 @@ class DateType extends BaseDateType
             return parent::convertToPHPValue($value);
         }
 
-        $date = \Staffim\DateTime\DateTime::createFromFormat('U.u', $value->sec . '.' . $value->usec);
+        $date = new \DateTime();
+        $date->setTimestamp($value->sec);
+
+        $dateString = $date->format('Y-m-d\TH:i:s') . '.' . str_pad($value->usec, 6, '0', STR_PAD_LEFT) . $date->format('O');
+        $date = \Staffim\DateTime\DateTime::createFromFormat(
+            \Staffim\DateTime\DateTime::FULL_ISO8601,
+            $dateString
+        );
 
         return $date;
     }
 
     public function closureToPHP()
     {
-        return 'if ($value instanceof \MongoDate) { $return = \Staffim\DateTime\DateTime::createFromFormat(\'U.u\', $value->sec . \'.\' . $value->usec); } else { $return = new \Staffim\DateTime\DateTime($value); }';
+        return 'if ($value instanceof \MongoDate) {
+            $date = new \DateTime();
+            $date->setTimestamp($value->sec);
+            $dateString = $date->format(\'Y-m-d\TH:i:s\') . \'.\' . str_pad($value->usec, 6, \'0\', STR_PAD_LEFT) . $date->format(\'O\');
+            $return = \Staffim\DateTime\DateTime::createFromFormat(\Staffim\DateTime\DateTime::FULL_ISO8601, $dateString);
+        } else {
+            $return = new \Staffim\DateTime\DateTime($value);
+        }';
     }
 }
