@@ -6,12 +6,14 @@
     "type": "bundle",
     "authors": [{"name": "Vyacheslav Salakhutdinov", "email": "megazoll@gmail.com"}],
     "require": {
-        "staffim/datetime": "^1.0"
+        "php": "^7.0.0",
+        "staffim/datetime": "^2.0"
     },
     "require-dev": {
         "phpunit/phpunit": "~4.8",
         "symfony/framework-bundle": "~2.6|~3.0",
-        "symfony/security-bundle": "~2.6|~3.0"
+        "symfony/security-bundle": "~2.6|~3.0",
+        "doctrine/common": "^2.8"
     },
     "suggest": {
         "jms/serializer-bundle": "Provides handler for DateTime",
