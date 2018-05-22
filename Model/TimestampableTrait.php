@@ -7,14 +7,14 @@ use Doctrine\ODM\MongoDB\Mapping\Annotations as MongoDB;
 trait TimestampableTrait
 {
     /**
-     * @MongoDB\Date
+     * @MongoDB\Field(type="date")
      *
      * @var \DateTimeInterface
      */
     private $createdAt;
 
     /**
-     * @MongoDB\Date
+     * @MongoDB\Field(type="date")
      *
      * @var \DateTimeInterface
      */
